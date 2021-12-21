@@ -11,7 +11,7 @@ parameters:
    description: The requested memory size
    required: 500m
 metadata:
-  name: my-test-deployment
+  name: my-k8s-deployment
 spec:
   replicas: 2
   selector:
@@ -24,7 +24,7 @@ spec:
     spec:
       containers:
       - name: my-angular-app
-        image: narendrababulinux/mywebapp:latest
+        image: narendrababulinux/mywebapp:1.0
         imagePullPolicy: Always
         ports:
         - containerPort: 8085
