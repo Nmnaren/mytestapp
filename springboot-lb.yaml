@@ -8,8 +8,8 @@ parameters:
     description: The limit cpu size
     required: 500m
   - name: MEM_MIN
-   description: The requested memory size
-   required: 500m
+    description: The requested memory size
+    required: 500m
 metadata:
   name: my-k8s-deployment
 spec:
