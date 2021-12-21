@@ -17,14 +17,7 @@ spec:
         image: narendrababulinux/mywebapp:2.0
         imagePullPolicy: Always
         ports:
-        - containerPort: 8085 
-        resources:
-          limits: 
-            cpu: "500m"
-            memory: "512Mi"
-          requests:
-            cpu: "50m"
-            memory: "512Mi" 
+        - containerPort: 8085  
 # service type loadbalancer
 ---
 apiVersion: v1
