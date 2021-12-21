@@ -1,15 +1,5 @@
 apiVersion: apps/v1
 kind: Deployment
-parameters:
-  - name: CPU_MIN
-    description: The required CPU size
-    required: 50m
-  - name: CPU_MAX
-    description: The limit cpu size
-    required: 500m
-  - name: MEM_MIN
-    description: The requested memory size
-    required: 500m
 metadata:
   name: my-k8s-deployment
 spec:
@@ -28,13 +18,6 @@ spec:
         imagePullPolicy: Always
         ports:
         - containerPort: 8085
-        resource:
-          limits:
-            cpu: 500m
-            memory: 500Mi
-          requests:
-            cpu: 50m
-            memory: 500Mi
 # service type loadbalancer
 ---
 apiVersion: v1
