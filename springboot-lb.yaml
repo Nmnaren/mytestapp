@@ -20,11 +20,11 @@ spec:
         - containerPort: 8085 
         resources:
           limits: 
-            cpu: 100m
-            memory: 100Mi
+            cpu: "128Mi"
+            memory: "500m"
           requests:
-            cpu: 50m
-            memory: 70Mi 
+            cpu: "64Mi"
+            memory: "250Mi" 
 # service type loadbalancer
 ---
 apiVersion: v1
