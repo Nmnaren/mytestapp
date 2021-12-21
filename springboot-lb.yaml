@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-test-deployment
+  name: my-k8s-deployment
 spec:
   replicas: 2
   selector:
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: my-angular-app
-        image: narendrababulinux/mywebapp:latest
+        image: narendrababulinux/mywebapp:${app_version}
         imagePullPolicy: Always
         ports:
         - containerPort: 8085
